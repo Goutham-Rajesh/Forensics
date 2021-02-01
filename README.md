@@ -31,4 +31,13 @@
     tool dd.
   
   * from that image i got the flag
+## The Office Trouble I
+
+ * first i used strings command to get password of zip
+ 
+ * Then i used fcrackzip to bruteforce password using rockyou.txt
+ 
+ * Able to crack it with in minutes
+ 
+ * unzip the file and inside there is a image containing the flag
 

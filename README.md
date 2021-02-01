@@ -21,7 +21,7 @@
    * There is a unreadable text.And Decrypt the text and got the flag
    
 ## Con-The-Cat
-  * first i file command to check the file
+  * first i used file command to check the file
   
   * Then i used exiftool and i know that there is some file compressed inside it
   

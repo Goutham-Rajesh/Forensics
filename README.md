@@ -41,3 +41,13 @@
  
  * unzip the file and inside there is a image containing the flag
 
+## Jay-chot
+ * first i used file cmd to image and it shows as data
+ 
+ * Then i used exiftool and it shows warning of unknown header
+ 
+ * I checked the file signature and it was wrong
+ 
+ * corrected using ghex tool
+ 
+ * got the flag from the image :)

@@ -51,3 +51,14 @@
  * corrected using ghex tool
  
  * got the flag from the image :)
+ 
+## Always Has Been
+ * first i go through strings
+ 
+ * used binwalk could'nt find anything
+ 
+ * then i read the challenge discription it gives a hint of blue colour
+ 
+ * so i used a java jar file stegsolve to change the colour filter
+ 
+ * from blue filter i was able to get the flag 

@@ -9,5 +9,5 @@
  * First i opened the image got nothing
  * Used exiftool find a comment of base64 encoded txt
  * Decoded the text using command echo "encoded txt" | base64 -d
- * Got the flag :)
+ * Got the flag "inctf{3x1f700l_15_n1ce_!_gu3ss___!!!!}" :)
  

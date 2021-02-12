@@ -14,6 +14,14 @@
  * open the image it was a zebra
  * Then used strings on it
  * Got the flag "inctf{5tr1ng5_4r3_us3ful_1_gu3s5}"
+## SH_challenge2.jpg 
+ * used strings got a base64 encoded text
+ * Decrypt it and got "Enimi3s_ah3ad"
+ * I thought there may be a zip file and it was the pwd
+ * Used binwalk could'nt find anything
+ * Then used steghide tool 
+ * Got the flag "inctf{fr13ndly_f1re_is_s0met1m3s_d4ng3r0u5}"
+ 
  
 
  

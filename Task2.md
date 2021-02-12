@@ -31,6 +31,14 @@
  * i just scanned the QR code 
  * Lol got the flagc"flag{QR_code_scanned}
  * Not sure this is the flag :(
+## b_challenge2.docx 
+ * To be frank i used strings got the flag lol :)
+ * Then i used ghex and find PK at the starting 
+ * its a zip files magic byte
+ * i renamed to zip and extracted it
+ * open word/media/ got two image 
+ * used strings on both 
+ * got the flag from 2nd "flag{h0wz_the_joke_hahahha!!}"
  
 
  

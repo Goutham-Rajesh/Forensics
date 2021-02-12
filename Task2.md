@@ -27,7 +27,10 @@
  * used binwalk nothing found
  * used stegsolve and changed the plane and scanned
  * Got the flag "VolgaCTF{5t3go_m4tr3shk4_in_4cti0n}"
- 
+## Z_challenge2.png
+ * i just scanned the QR code 
+ * Lol got the flagc"flag{QR_code_scanned}
+ * Not sure this is the flag :(
  
 
  

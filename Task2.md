@@ -21,6 +21,12 @@
  * Used binwalk could'nt find anything
  * Then used steghide tool 
  * Got the flag "inctf{fr13ndly_f1re_is_s0met1m3s_d4ng3r0u5}"
+## SS_challenge2.png
+ * Scanned the QR code got some mathematic equation
+ * Used strings nothing found
+ * used binwalk nothing found
+ * used stegsolve and changed the plane and scanned
+ * Got the flag "VolgaCTF{5t3go_m4tr3shk4_in_4cti0n}"
  
  
 

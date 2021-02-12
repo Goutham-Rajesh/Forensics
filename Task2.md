@@ -10,4 +10,10 @@
  * Used exiftool find a comment of base64 encoded txt
  * Decoded the text using command echo "encoded txt" | base64 -d
  * Got the flag "inctf{3x1f700l_15_n1ce_!_gu3ss___!!!!}" :)
+## s_challenge2.jpg
+ * open the image it was a zebra
+ * Then used strings on it
+ * Got the flag "inctf{5tr1ng5_4r3_us3ful_1_gu3s5}"
+ 
+
  

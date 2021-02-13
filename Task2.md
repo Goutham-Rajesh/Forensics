@@ -39,6 +39,15 @@
  * open word/media/ got two image 
  * used strings on both 
  * got the flag from 2nd "flag{h0wz_the_joke_hahahha!!}"
- 
+## FS_challenge2.zip 
+ * first i changed magic key of zip to pk
+ * used exiftool got nothing
+ * used string got hexadecimal no
+ * decrypt it and got "this_is_the_password" this is the pwd of zip
+ * There was a image chall.jpg 
+ * then used exiftool got nothimg
+ * used binwalk and find a flag.txt 
+ * open flag got a md5 hash tried to decrypt from crackstation and many other website but could'nt
+ * I think it has been removed from thier database :(
 
  

@@ -31,6 +31,8 @@
 * Then i saw a person below it providing simple tshark commands to extract
 * Then i made slight changes on it and i could extract the zip and cracked using john
 * Got the flag ```shellmates{icmp_p@y04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}```
+##Dnscap
+* working on it last stage :}
 ## Biz44re
 * This was simple task for dedicated people there are more than 100 packets
 * After analysing 3 to 4 times only i could find the starting point of this task
@@ -39,4 +41,13 @@
 * There is some hexadecimal value in three packets having icmp protocol
 * Then i wrote a python script using scapy to export that and decoding i could see that its zip containing a png
 * unzipped it got the flag ```inctf{_someTim3s_u_h4v3_to_l00k_3v3ryWh3r3_cl0s3r_TO_G3T_th3_wh0l3!}```
-
+## Orcish
+* This challenge can be easly solved by those who solved Bizaare easly
+* It was also a similiar kind of challenge after solving bizaare and its complicated my pal
+* I started focusing on icmp protocol.filtered those protocol and while looking the data
+* Excecpt few all the packets have same data 
+* Those fews has an additional letter as compared to that packets
+* And this packets have error(unknown icmp(obsolete or malformed) in type field)
+* while analysing 7 packets packets having this errors in the middle and by joining alphabet i could see the word lol nice
+* Then wrote a python script using scapy for this to extract all the alphabet from type field having this error
+* i could see a gif file but extracted the data but i couldnt open it :[

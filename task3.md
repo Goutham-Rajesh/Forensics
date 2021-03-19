@@ -31,5 +31,12 @@
 * Then i saw a person below it providing simple tshark commands to extract
 * Then i made slight changes on it and i could extract the zip and cracked using john
 * Got the flag ```shellmates{icmp_p@y04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}```
-
+## Biz44re
+* This was simple task for dedicated people there are more than 100 packets
+* After analysing 3 to 4 times only i could find the starting point of this task
+* There are lots of other protocols and i followed many tcp packtets and filtered dns and http
+* But i could not find anything after solving its complicated my pal and i see few icmp protocol packets
+* There is some hexadecimal value in three packets having icmp protocol
+* Then i wrote a python script using scapy to export that and decoding i could see that its zip containing a png
+* unzipped it got the flag ```inctf{_someTim3s_u_h4v3_to_l00k_3v3ryWh3r3_cl0s3r_TO_G3T_th3_wh0l3!}```
 

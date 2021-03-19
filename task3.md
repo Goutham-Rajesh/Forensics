@@ -15,4 +15,21 @@
 * so i checked the post request and followed the packet in tcp stream.
 * From there i found the flag as password ``picoCTF{n0ts3cur3_894a6546}``
 ## It's Complicated My Pal
+* first by analayzing the pcap file using wireshark i could see lots of tcp and tls protocols
+* Then i thought there might be some private key to decrypyt the TLS protocol
+* I used find packet option in edit and searched for key but i couldn't find any
+* Then i followed many tcp protocol and filtered http protoco but i couldn't find anything intresting
+* Then by looking protocol hierarchy i could find icmp protocol 
+* And i am not familiar with that protocol so searched on google and learnt basic things
+* Then i could see flag.png inside a zip in the data of the packet
+* So i tried to extract it using wireshark export bytes but there are more than 100 packets
+* Then i tried to read the file in scapy but i couldnt read that its showing some errors
+* Then i am in a situation to do nothing so i just used in binwalk and got a zip with password protected
+* Tried to crack using john and fcrack but i couldnt
+* Then i searched on google how to export data from pcap file other than wireshark and scapy
+* Then i found a person having similiar problem he just solved it using tshark but it was too complicted to understand
+* Then i saw a person below it providing simple tshark commands to extract
+* Then i made slight changes on it and i could extract the zip and cracked using john
+* Got the flag ```shellmates{icmp_p@y04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}```
+
 

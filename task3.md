@@ -76,7 +76,7 @@ print(g)
 * But while opening it i am getting some errors
 
 ## Biz44re
-* This was simple task for dedicated people there are more than 100 packets
+* This was simple task but needs some careful look at each packets there are more than 100 of packets
 * After analysing 3 to 4 times only i could find the starting point of this task
 * There are lots of other protocols and i followed many tcp packtets and filtered dns and http
 * But i could not find anything after solving its complicated my pal and i see few icmp protocol packets

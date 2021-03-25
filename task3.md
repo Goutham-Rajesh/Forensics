@@ -32,8 +32,49 @@
 * Then i made slight changes on it and i could extract the zip and cracked using john
 * `tshark -r capture.pcap -T fields -e data 'icmp && ip.src==192.168.1.200' | xxd -p -r > sample.zip`
 * Got the flag ```shellmates{icmp_p@y04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}```
-## Dnscap
-* working on it is in last stage 
+## Dnscap (unsolved)
+* working on it. Towards last stage 
+* While analysing it in wireshark i could see some hexadecimal value in data
+* So i wrote a script to extract it
+```
+from scapy.all import *
+
+x=rdpcap('dnscap.pcap')
+data=[]
+g=''
+k=[]
+for i in range(1,382):
+    if (x[i].haslayer(DNSQR) and not x[i].haslayer(DNSRR)):
+        if (x[i][DNS][DNSQR].qname==x[i-1][DNS][DNSQR].qname):
+#           print(i)
+#       k.append(i)
+            continue
+        else:
+            data.append(x[i][DNS][DNSQR].qname)
+#for i in range(2,len(k),2):
+#    if (i!=k[i]):
+#        print(i)
+
+g+=str(data)
+g=g.replace("b'",'')
+g=g.replace("'",'')
+g=g.replace('.skullseclabs.org.','')
+g=g.replace('.','')
+g=g.replace(' ','')
+g=g.replace(",",'')
+g=g.replace('[','')
+g=g.replace(']','')
+#g=g.upper()
+print(g)
+#print(data)
+```
+* `python3 newdns.py | xxd -p -r` 
+* Decoded the hexadecimal and i could see some text like "IEND" "Welcome to dnscap! The flag is below, have fun!!"
+* Then opening it in ghex i could see PNG magic bytes
+* `python3 newdns.py | xxd -p -r > sample`
+* After decoding hex and removing some unwanted things on the top and saved it as png
+* But while opening it i am getting some errors
+
 ## Biz44re
 * This was simple task for dedicated people there are more than 100 packets
 * After analysing 3 to 4 times only i could find the starting point of this task
@@ -54,7 +95,7 @@
 * `python3 bizz.py >tblizz `
 * decoded the hexadecimal `cat tblizz| xxd -p -r > tblizz.zip`
 * unzipped it got the flag ```inctf{_someTim3s_u_h4v3_to_l00k_3v3ryWh3r3_cl0s3r_TO_G3T_th3_wh0l3!}```
-## Orcish
+## Orcish (unsolved)
 * This challenge can be easly solved by those who solved Bizaare easly
 * It was also a similiar kind of challenge after solving bizaare and its complicated my pal
 * I started focusing on icmp protocol.filtered those protocol and while looking the data

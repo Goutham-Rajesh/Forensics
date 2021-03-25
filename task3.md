@@ -81,5 +81,5 @@ for i in range(0,len(x)):
 print(g)
 #print(data)
 ```
-* i could see a gif file but extracted the data but i couldnt open it 
+* i could see a gif file extracted the data but i couldnt open it 
 * * `python3 data.py > sample.gif`

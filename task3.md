@@ -32,7 +32,7 @@
 * Then i made slight changes on it and i could extract the zip and cracked using john
 * `tshark -r capture.pcap -T fields -e data 'icmp && ip.src==192.168.1.200' | xxd -p -r > sample.zip`
 * Got the flag ```shellmates{icmp_p@y04d_4in't_us3l3ss_4ft3r_4ll_r1gHt?}```
-## Dnscap (unsolved)
+## Dnscap (UNSOLVED)
 * working on it. Towards last stage 
 * While analysing it in wireshark i could see some hexadecimal value in data
 * So i wrote a script to extract it
@@ -95,7 +95,7 @@ print(g)
 * `python3 bizz.py >tblizz `
 * decoded the hexadecimal `cat tblizz| xxd -p -r > tblizz.zip`
 * unzipped it got the flag ```inctf{_someTim3s_u_h4v3_to_l00k_3v3ryWh3r3_cl0s3r_TO_G3T_th3_wh0l3!}```
-## Orcish (unsolved)
+## Orcish
 * This challenge can be easly solved by those who solved Bizaare easly
 * It was also a similiar kind of challenge after solving bizaare and its complicated my pal
 * I started focusing on icmp protocol.filtered those protocol and while looking the data
@@ -123,4 +123,27 @@ print(g)
 #print(data)
 ```
 * i could see a gif file extracted the data but i couldnt open it 
-* * `python3 data.py > sample.gif`
+* `python3 data.py > sample.gif`
+* ya finaly solved no need to filter packets having unknown icmp
+* just filter packets having icmp protocol 
+* Instead of extracting type field ascii value i extracted hexadecimal value at type field
+* new script 
+```
+from scapy.all import *
+x=rdpcap('data.pcap')
+g=''
+r=''
+b=''
+for i in range(0,len(x)):
+    if(x[i].haslayer(ICMP) and x[i][IP].src=='10.136.255.127'):
+        r=hex(x[i][ICMP].type)
+        if len(r)==3:
+            r="0"+r[2:]
+        else:
+            r=hex(x[i][ICMP].type)[2:]
+        g+=r
+
+print(g)
+```
+* After decoding hex and redireted it got the flag `python3 newdata.py | xxd -p -r > gr.gif`
+* flag : `flag{we_ride_at_midnight}`
